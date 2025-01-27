@@ -1,0 +1,167 @@
+header {
+    padding: 10px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    .avatar {
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .logo {
+        height: 40px;
+        max-width: 100%;
+        object-fit: contain;
+    }
+}
+
+main {
+    padding: 40px;
+    margin-top: 60px;
+
+    .alert {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        flex-wrap: wrap;
+
+        span {
+            flex: 1;
+        }
+    }
+
+    .tasks-kanban {
+        margin-top: 30px;
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        overflow-x: auto;
+
+        .tasks-board {
+            display: flex;
+            gap: 20px;
+            flex-flow: column;
+            background-color: #1f1f21;
+            flex-basis: 400px;
+            padding: 20px;
+
+            .board-title {
+                font-size: 15px;
+                color: #96999e;
+                font-weight: 600;
+            }
+
+            .task,
+            .subtask {
+                border: 1px solid gainsboro;
+                background-color: #242528;
+                padding: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 10px;
+
+                span {
+                    font-size: 15px;
+                    flex: 1;
+                }
+            }
+
+            .subtasks {
+                display: flex;
+                gap: 10px;
+                flex-flow: column;
+                padding-left: 30px;
+                position: relative;
+
+                &:before {
+                    content: '\f3be';
+                    font-family: 'Font Awesome 5 Free';
+                    font-weight: 700;
+                    position: absolute;
+                    color: #666666;
+                    top: 15px;
+                    left: 5px;
+                }
+
+                .subtask {
+                    padding: 9px 15px;
+
+                    span {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+
+        &:not(.btn):hover {
+            text-decoration: underline;
+        }
+    }
+
+    .dropdown-menu {
+        border-radius: 0;
+
+        a:hover {
+            text-decoration: none;
+        }
+    }
+
+    table {
+        td {
+            vertical-align: middle;
+        }
+    }
+
+    .btn {
+        border-radius: 0;
+        padding: 6px 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        color: white;
+        margin-bottom: 0;
+    }
+
+    h3 {
+        font-size: 1.15rem;
+    }
+
+    h4 {
+        font-size: 0.95rem;
+        font-weight: 400;
+        margin-top: 20px;
+    }
+
+    .menu-flex {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+        justify-content: space-between;
+    }
+
+    .actions-flex {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
