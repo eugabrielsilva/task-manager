@@ -1,7 +1,6 @@
 <div class="modal fade" id="deleteProject" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
-            <input type="hidden" required name="id" id="editTaskId">
             <div class="modal-header">
                 <h1 class="modal-title fs-5">Excluir projeto</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>

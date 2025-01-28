@@ -18,7 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function setFormField(field, value) {
-    document.querySelector(`#${field}`).value = value;
+    const el = document.querySelector(`#${field}`);
+    if(el) el.value = value;
 }
 
 function setupTaskEdit(id, description, status) {
@@ -51,9 +52,9 @@ function setupProjectDelete(url) {
 }
 
 function confirmTaskDelete() {
-    window.location = taskDeleteUrl;
+    if(taskDeleteUrl) window.location = taskDeleteUrl;
 }
 
 function confirmProjectDelete() {
-    window.location = projectDeleteUrl;
+    if(projectDeleteUrl) window.location = projectDeleteUrl;
 }

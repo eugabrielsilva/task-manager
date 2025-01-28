@@ -7,5 +7,6 @@
             "savePath": null,
             "savePathReplacementPairs": null
         }
-    ]
+    ],
+    "intelephense.files.maxSize": 1000000000000
 }

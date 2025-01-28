@@ -66,7 +66,7 @@ class Tasks
     }
 
     /**
-     * Edit project.
+     * Edit task.
      * @param Request $request
      */
     public function edit(Request $request)
@@ -81,7 +81,7 @@ class Tasks
 
         if (!$task) {
             return redirect()
-                ->route('projects.index')
+                ->back()
                 ->with('error', 'Tarefa não encontrada!');
         }
 
@@ -112,7 +112,7 @@ class Tasks
 
         if (!$task) {
             return redirect()
-                ->route('projects.index')
+                ->back()
                 ->with('error', 'Tarefa não encontrada!');
         }
 
@@ -143,7 +143,7 @@ class Tasks
 
         if (!$task) {
             return redirect()
-                ->route('projects.index')
+                ->back()
                 ->with('error', 'Tarefa não encontrada!');
         }
 

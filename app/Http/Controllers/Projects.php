@@ -100,7 +100,7 @@ class Projects
         $project->save();
 
         return redirect()
-            ->route('projects.index')
+            ->back()
             ->with('message', 'Projeto editado com sucesso!');
     }
 

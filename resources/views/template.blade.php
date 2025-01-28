@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
     <head>
         <meta charset="UTF-8">
@@ -23,6 +23,10 @@
         <main>
             @yield('content')
         </main>
+
+        <footer>
+            Desenvolvido por <a href="https://gabrielsilva.dev.br" target="_blank">Gabriel Silva</a>
+        </footer>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
         <script src="{{ asset('assets/js/script.min.js') }}"></script>
