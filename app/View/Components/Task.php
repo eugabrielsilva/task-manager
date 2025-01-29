@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use App\Http\Controllers\Helpers;
 use App\Models\Task as TaskModel;
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -22,6 +23,8 @@ class Task extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.task');
+        return view('components.task', [
+            'h' => new Helpers()
+        ]);
     }
 }

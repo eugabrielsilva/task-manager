@@ -2,15 +2,16 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * 
  *
- * @property int $id
- * @property int|null $task_id
- * @property int $project_id
+ * @property string $id
+ * @property string|null $task_id
+ * @property string $project_id
  * @property string $description
  * @property string $status
  * @property \Illuminate\Support\Carbon|null $created_at
@@ -38,6 +39,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Task extends Model
 {
     use SoftDeletes;
+    use HasUuids;
 
     protected $fillable = [
         'task_id',

@@ -124,10 +124,14 @@ main {
         }
     }
 
-    table {
-        td {
-            vertical-align: middle;
-        }
+    .modal-content,
+    .form-control,
+    .form-select {
+        border-radius: 0;
+    }
+
+    table td {
+        vertical-align: middle;
     }
 
     .btn {

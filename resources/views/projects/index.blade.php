@@ -53,14 +53,14 @@
                     <ul class="dropdown-menu">
                         {{-- Edit project --}}
                         <li>
-                            <button data-bs-toggle="modal" data-bs-target="#editProject" onclick="setupProjectEdit({{ $item->id }}, '{{ addslashes($item->title) }}', '{{ addslashes($item->description) }}', '{{ $item->delivery_date->toDateString() }}')" class="dropdown-item">
+                            <button data-bs-toggle="modal" data-bs-target="#editProject" onclick="{!! $h->setupProjectEdit($item) !!}" class="dropdown-item">
                                 Editar
                             </button>
                         </li>
 
                         {{-- Delete project --}}
                         <li>
-                            <button data-bs-toggle="modal" data-bs-target="#deleteProject" onclick="setupProjectDelete('{{ route('projects.delete', ['id' => $item->id]) }}')" class="dropdown-item text-danger">
+                            <button data-bs-toggle="modal" data-bs-target="#deleteProject" onclick="{!! $h->setupProjectDelete($item) !!}" class="dropdown-item text-danger">
                                 Excluir
                             </button>
                         </li>

@@ -16,13 +16,14 @@ class Projects
 
         return view('projects/index', [
             'projects' => $projects,
-            'title' => 'Projetos'
+            'title' => 'Projetos',
+            'h' => new Helpers()
         ]);
     }
 
     /**
      * Create project.
-     * @param Request $request
+     * @param Request $request Request data.
      */
     public function create(Request $request)
     {
@@ -45,9 +46,9 @@ class Projects
 
     /**
      * View project.
-     * @param int $id
+     * @param string $id Project id.
      */
-    public function view($id)
+    public function view(string $id)
     {
         $project = Project::find($id);
 
@@ -70,12 +71,13 @@ class Projects
             'project' => $project,
             'finished_tasks' => $finished_tasks,
             'pending_tasks' => $pending_tasks,
+            'h' => new Helpers()
         ]);
     }
 
     /**
      * Edit project.
-     * @param Request $request
+     * @param Request $request Request data.
      */
     public function edit(Request $request)
     {
@@ -106,9 +108,9 @@ class Projects
 
     /**
      * Delete project.
-     * @param int $id
+     * @param string $id Project id.
      */
-    public function delete($id)
+    public function delete(string $id)
     {
         $project = Project::find($id);
 

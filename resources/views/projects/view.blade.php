@@ -8,8 +8,8 @@
 
         {{-- Project actions --}}
         <div class="actions-flex">
-            <button data-bs-toggle="modal" data-bs-target="#editProject" class="btn btn-sm btn-secondary" onclick="setupProjectEdit({{ $project->id }}, '{{ addslashes($project->title) }}', '{{ addslashes($project->description) }}', '{{ $project->delivery_date->toDateString() }}')">Editar projeto</button>
-            <button data-bs-toggle="modal" data-bs-target="#deleteProject" onclick="setupProjectDelete('{{ route('projects.delete', ['id' => $project->id]) }}')" class="btn btn-sm btn-outline-danger">
+            <button data-bs-toggle="modal" data-bs-target="#editProject" class="btn btn-sm btn-secondary" onclick="{!! $h->setupProjectEdit($project) !!}">Editar projeto</button>
+            <button data-bs-toggle="modal" data-bs-target="#deleteProject" onclick="{!! $h->setupProjectDelete($project) !!}" class="btn btn-sm btn-outline-danger">
                 Excluir projeto
             </button>
         </div>

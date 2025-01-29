@@ -10,9 +10,9 @@ class Tasks
 {
     /**
      * Finish task.
-     * @param int $id
+     * @param string $id Task id.
      */
-    public function finish($id)
+    public function finish(string $id)
     {
         $task = Task::find($id);
 
@@ -38,7 +38,7 @@ class Tasks
 
     /**
      * Create task.
-     * @param Request $request
+     * @param Request $request Request data.
      */
     public function create(Request $request)
     {
@@ -67,7 +67,7 @@ class Tasks
 
     /**
      * Edit task.
-     * @param Request $request
+     * @param Request $request Request data.
      */
     public function edit(Request $request)
     {
@@ -104,9 +104,9 @@ class Tasks
 
     /**
      * Delete task.
-     * @param int $id
+     * @param string $id Task id.
      */
-    public function delete($id)
+    public function delete(string $id)
     {
         $task = Task::find($id);
 
@@ -130,7 +130,7 @@ class Tasks
 
     /**
      * Create subtask.
-     * @param Request $request
+     * @param Request $request Request data.
      */
     public function createSubtask(Request $request)
     {

@@ -14,7 +14,7 @@
     </a>
 
     {{-- Create subtask button --}}
-    <button data-bs-toggle="modal" data-bs-title="Criar subtarefa" data-bs-target="#createSubtask" onclick="setupCreateSubtask({{ $item->id }})" class="btn btn-sm btn-outline-primary">
+    <button data-bs-toggle="modal" data-bs-title="Criar subtarefa" data-bs-target="#createSubtask" onclick="{!! $h->setupCreateSubtask($item) !!}" class="btn btn-sm btn-outline-primary">
         <i class="fas fa-network-wired"></i>
     </button>
     @endif
@@ -27,14 +27,14 @@
         <ul class="dropdown-menu">
             {{-- Edit task --}}
             <li>
-                <button data-bs-toggle="modal" data-bs-target="#editTask" onclick="setupTaskEdit({{ $item->id }}, '{{ addslashes($item->description) }}', '{{ addslashes($item->status) }}')" class="dropdown-item">
+                <button data-bs-toggle="modal" data-bs-target="#editTask" onclick="{!! $h->setupTaskEdit($item) !!}" class="dropdown-item">
                     Editar
                 </button>
             </li>
 
             {{-- Delete task --}}
             <li>
-                <button data-bs-toggle="modal" data-bs-target="#deleteTask" onclick="setupTaskDelete('{{ route('tasks.delete', ['id' => $item->id]) }}')" class="dropdown-item text-danger">
+                <button data-bs-toggle="modal" data-bs-target="#deleteTask" onclick="{!! $h->setupTaskDelete($item) !!}" class="dropdown-item text-danger">
                     Excluir
                 </button>
             </li>
@@ -70,14 +70,14 @@
             <ul class="dropdown-menu">
                 {{-- Edit subtask --}}
                 <li>
-                    <button data-bs-toggle="modal" data-bs-target="#editTask" onclick="setupTaskEdit({{ $sub->id }}, '{{ addslashes($sub->description) }}', '{{ addslashes($sub->status) }}')" class="dropdown-item">
+                    <button data-bs-toggle="modal" data-bs-target="#editTask" onclick="{!! $h->setupTaskEdit($sub) !!}" class="dropdown-item">
                         Editar
                     </button>
                 </li>
 
                 {{-- Delete subtask --}}
                 <li>
-                    <button data-bs-toggle="modal" data-bs-target="#deleteTask" onclick="setupTaskDelete('{{ route('tasks.delete', ['id' => $sub->id]) }}')" class="dropdown-item text-danger">
+                    <button data-bs-toggle="modal" data-bs-target="#deleteTask" onclick="{!! $h->setupTaskDelete($sub) !!}" class="dropdown-item text-danger">
                         Excluir
                     </button>
                 </li>
