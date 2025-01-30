@@ -57,7 +57,7 @@
 
         {{-- Finish button --}}
         @if($sub->status === 'pending')
-        <a href="{{ route('tasks.finish', ['id' => $sub->id]) }}" class="btn btn-sm btn-success">
+        <a href="{{ route('tasks.finish', ['id' => $sub->id]) }}" data-bs-title="Concluir tarefa" class="btn btn-sm btn-success">
             <i class="fas fa-check"></i>
         </a>
         @endif

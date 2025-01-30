@@ -52,4 +52,17 @@ class Helpers
             addslashes($project->delivery_date->toDateString()),
         );
     }
+
+    public function isProjectLate(Project $project)
+    {
+        if ($project->delivery_date->isToday()) {
+            return 'text-bg-warning';
+        }
+
+        if ($project->delivery_date->isPast()) {
+            return 'text-bg-danger';
+        }
+
+        return 'text-bg-light';
+    }
 }

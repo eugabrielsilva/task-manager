@@ -15,10 +15,10 @@
         </div>
     </div>
 
-    <h3 class="mt-3">
+    <div class="badge mt-2 {{ $h->isProjectLate($project) }}">
         <i class="far fa-calendar me-1"></i>
         Data de entrega: {{ $project->delivery_date->format('d/m/Y') }}
-    </h3>
+    </div>
 
     @if($project->description)
     <h4><strong>Descrição:</strong> {{ $project->description }}</h4>

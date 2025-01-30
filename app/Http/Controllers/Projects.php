@@ -30,7 +30,7 @@ class Projects
         $request->validate([
             'description' => 'max:65535',
             'title' => 'required|max:255',
-            'delivery_date' => 'required'
+            'delivery_date' => 'required|date_format:Y-m-d'
         ]);
 
         Project::create([
@@ -82,10 +82,10 @@ class Projects
     public function edit(Request $request)
     {
         $request->validate([
-            'id' => 'required',
+            'id' => 'required|uuid',
             'description' => 'max:65535',
             'title' => 'required|max:255',
-            'delivery_date' => 'required'
+            'delivery_date' => 'required|date_format:Y-m-d'
         ]);
 
         $project = Project::find($request->id);

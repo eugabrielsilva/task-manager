@@ -42,7 +42,9 @@
                 {{-- Project delivery date --}}
                 <td>
                     <a href="{{ route('projects.view', ['id' => $item->id]) }}">
-                        {{ $item->delivery_date->format('d/m/Y') }}
+                        <span class="badge {{ $h->isProjectLate($item) }}">
+                            {{ $item->delivery_date->format('d/m/Y') }}
+                        </span>
                     </a>
                 </td>
                 <td class="dropdown">

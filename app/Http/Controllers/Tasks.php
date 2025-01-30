@@ -44,7 +44,7 @@ class Tasks
     {
         $request->validate([
             'description' => 'required|max:65535',
-            'project_id' => 'required'
+            'project_id' => 'required|uuid'
         ]);
 
         $project = Project::find($request->project_id);
@@ -74,7 +74,7 @@ class Tasks
         $request->validate([
             'description' => 'required|max:65535',
             'status' => 'required|in:pending,finished',
-            'id' => 'required'
+            'id' => 'required|uuid'
         ]);
 
         $task = Task::find($request->id);
@@ -136,7 +136,7 @@ class Tasks
     {
         $request->validate([
             'description' => 'required|max:65535',
-            'task_id' => 'required'
+            'task_id' => 'required|uuid'
         ]);
 
         $task = Task::find($request->task_id);
